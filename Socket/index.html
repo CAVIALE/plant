@@ -18,10 +18,16 @@
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
-	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/it.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script>
   var socket = io();
-  socket.on('myRandomElement');
+  var VittorioMiManchi;
+  socket.on('temp1', function(data){alert('temp1 = ' + data);});
+  socket.on('temp2', function(data){alert('temp2 = ' + data);});
 </script>
   </body>
 </html>
